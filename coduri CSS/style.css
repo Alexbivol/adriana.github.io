@@ -1,0 +1,231 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+iframe { /* Target the iframe directly */
+    display: block; /* Make it a block-level element */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+
+
+/* Header Styles */
+header .logo-wrapper{
+    margin-right: 15px; /* Adjust the value for desired spacing */
+}
+
+
+header {
+    background-color: #fff;
+    color: #000000; 
+    text-align: center;
+    align-items: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    position: relative; /* For background image positioning */
+}
+
+
+
+header::before {
+    content: "";
+    background: url('imagini/header-background.jpg') center/cover no-repeat; /* Replace with your actual background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; /* Adjust opacity as needed */
+    z-index: -1; /* Place behind the header content */
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+header .store-title {
+    line-height: 70px;
+}
+
+
+
+nav a {
+    display: inline-block;
+    margin: 0 1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* White text for better contrast on the background image */
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px; /* Add rounded corners for a modern look */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle white background on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 3em 0;
+    color: white; 
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for text */
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.hero button {
+    background-color: #007AFF;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Products Styles */
+.featured-products {
+    padding: 3em;
+    text-align: center;
+}
+
+.product h3 { /* Target product titles */
+    color: rgb(0, 0, 0);
+}
+
+.product p { /* Target product descriptions */
+    color: rgb(0, 0, 0)
+}
+
+.product a { /* Target links within the product (if they are blue) */
+    color: rgb(0, 0, 0); 
+    text-decoration: none; /* Remove any default underlines on links */
+}
+
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5em;
+    text-align: center;
+    margin: 1em;
+    width: 300px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Allow products to wrap */
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+
+.contact-info {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #333;
+}
+
+
+/* Shopping Cart */
+#cart {
+    text-align: center;
+    flex: 1; /* Takes up less space than the products */
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Keep the cart fixed as you scroll */
+    top: 20px; /* Adjust distance from the top as needed */
+}
+
+#cart h2 {
+    margin-top: 0; /* Remove extra margin above the heading */
+}
+
+#cart-items li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#total-price {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    #cart {
+        position: static; /* Remove sticky positioning on smaller screens */
+    }
+}
+
+/* ... (Your existing styles) ... */
+#cart-items li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    display: flex; /* Use flexbox to arrange items and button */
+    justify-content: space-between; /* Put space between the item and button */
+    align-items: center; /* Align items vertically */
+}
+
+.remove-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

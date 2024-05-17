@@ -1,0 +1,100 @@
+let cartItems = [];
+
+function addToCart(product) {
+    const existingItem = cartItems.find(item => {
+        return item.name === product.name && 
+               item.memory === product.memory &&
+               item.color === product.color;
+    });
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cartItems.push({ ...product, quantity: 1 }); // Create a copy with quantity 1
+    }
+
+    updateCart();
+}
+
+function updateCart() {
+    // ... (same as before)
+}
+
+function removeFromCart(index) {
+    // ... (same as before)
+}
+
+// Assuming your products are in a JSON array like this (replace with your actual data)
+const products = [
+    {
+        name: "iPhone 15",
+        basePrice: 499,
+        imageSrc: "phone_image.jpg",
+        options: {
+            memory: ["128GB", "256GB"],
+            color: ["Silver", "Midnight", "Starlight"]
+        }
+    },
+    {
+        name: "iPhone 15 Pro",
+        basePrice: 999,
+        imageSrc: "phone_image2.jpg",
+        options: {
+            memory: ["256GB", "512GB", "1TB"],
+            color: ["Silver", "Space Black", "Deep Purple", "Gold"]
+        }
+    }
+];
+
+const productContainer = document.getElementById("product-container");
+
+products.forEach(product => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
+
+    // Add image
+    const img = document.createElement("img");
+    img.src = product.imageSrc;
+    img.alt = product.name;
+    productDiv.appendChild(img);
+
+    const h2 = document.createElement("h2");
+    h2.textContent = product.name;
+    productDiv.appendChild(h2);
+
+    const pricePara = document.createElement("p");
+    pricePara.textContent = `Price: $${product.basePrice}`;
+    productDiv.appendChild(pricePara);
+
+    // Add options
+    for (const optionName in product.options) {
+        const label = document.createElement("label");
+        label.textContent = optionName + ": ";
+        productDiv.appendChild(label);
+
+        const select = document.createElement("select");
+        select.dataset.option = optionName;
+        product.options[optionName].forEach(optionValue => {
+            const option = document.createElement("option");
+            option.value = optionValue;
+            option.text = optionValue;
+            select.appendChild(option);
+        });
+        productDiv.appendChild(select);
+    }
+
+    // Add to cart button
+    const button = document.createElement("button");
+    button.textContent = "Add to Cart";
+    button.onclick = () => {
+        addToCart({
+            name: product.name,
+            price: product.basePrice,
+            memory: productDiv.querySelector('[data-option="memory"]').value,
+            color: productDiv.querySelector('[data-option="color"]').value
+        });
+    };
+    productDiv.appendChild(button);
+
+    productContainer.appendChild(productDiv);
+});

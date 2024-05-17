@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Store</title>
+    <link href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg">
+    <link rel="stylesheet" href="D:\Proiecte Informatica\adriana\html,java, css\coduri CSS\produse.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-wrapper">
+            <img src="https://pbs.twimg.com/profile_images/1717013664954499072/2dcJ0Unw_400x400.png" width="50px" alt="Apple Store Logo">
+        </div>
+        <div class="store-title"> 
+            <h1>Apple Store</h1>
+        </div>
+        <nav>
+            <a href="D:\Proiecte Informatica\adriana\html,java, css\index.html">Home</a>
+            <a href="D:\Proiecte Informatica\adriana\html,java, css\pagini\contact.html">Contact</a>
+        </nav>
+    </header>
+
+    
+    <div id="product-container">
+        <div class="product">
+            <a href="https://istyle.ro/iphone-15-256gb-negru.html"><img src="https://istyle.ro/pub/media/catalog/product/cache/image/400x400/beff4985b56e3afdbeabfc89641a4582/i/p/iphone_15_black_pdp_image_position-1__en-us_2_1.jpg" alt="Phone Model 1"></a>
+            <h2>Iphone 15 256GB Negru</h2>
+            <p>Price: $499</p>
+            <p></p>
+            <button onclick="addToCart('Iphone 15', 499)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <a href="https://istyle.ro/iphone-15-pro-256gb-blue-titanium.html"><img src="https://istyle.ro/media/catalog/product/cache/image/e9c3970ab036de70892d86c6d221abfe/i/p/iphone_15_pro_blue_titanium_pdp_image_position-1__en-us_1_1_1.jpg" alt="Phone Model 2"></a>
+            <h2>Iphone 15 Pro 256GB Blue Titanium</h2>
+            <p>Price: $999</p>
+            <button onclick="addToCart('Iphone 15 Pro', 599)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <a href="https://istyle.ro/iphone-15-pro-max-256gb-natural-titanium.html"><img src="https://istyle.ro/pub/media/catalog/product/cache/image/400x400/beff4985b56e3afdbeabfc89641a4582/i/p/iphone_15_pro_max_natural_titanium_pdp_image_position-1__en-us_1_1_1.jpg" alt="Phone Model 3"></a>
+            <h2>Iphone 15 Pro Max 256GB Natural Titanium</h2>
+            <p>Price: $1449</p>
+            <button onclick="addToCart('Iphone 15 Pro Max', 1449)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <a href="https://istyle.ro/apple-watch-9-gps-45mm-midnight-aluminium-case-midnight-sport-band-ml.html"><img src="https://istyle.ro/pub/media/catalog/product/cache/image/400x400/beff4985b56e3afdbeabfc89641a4582/a/p/apple_watch_series_9_gps_45mm_midnight_aluminum_midnight_sport_band_34fr_screen__usen_t-0_1_1.jpg" alt="Watch Model 3"></a>
+            <h2>Apple Watch 9</h2>
+            <p>Price: $459</p>
+            <button onclick="addToCart('Apple Watch 9', 459)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <a href="https://istyle.ro/airpods-pro-gen-2-cu-carcasa-de-incarcare-magsafe-usb-c.html"><img src="https://istyle.ro/pub/media/catalog/product/cache/image/400x400/beff4985b56e3afdbeabfc89641a4582/m/t/mtjv3_av2_t.jpg" alt="AirPods Pro (2nd generation)"></a>
+            <h2>AirPods Pro (2nd generation)</h2>
+            <p>Price: $269</p>
+            <button onclick="addToCart('AirPods Pro', 269)">Add to Cart</button>
+        </div>
+        
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+    </div>
+
+    <script src="D:\Proiecte Informatica\adriana\html,java, css\java\java.js" ></script>
+
+
+    <footer>
+        <p>&copy; 2024 Apple Store. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="java/main.js"></script> 
+</body>
+</html>
+    
