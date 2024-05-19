@@ -16,6 +16,7 @@ iframe { /* Target the iframe directly */
 /* Header Styles */
 header .logo-wrapper{
     margin-right: 15px; /* Adjust the value for desired spacing */
+    border-radius: 40px;
 }
 
 
